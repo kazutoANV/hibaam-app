@@ -8,6 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: unzip -q HibaamApp.zip
+      - run: sed -i 's/setImmersive/setFullscreenMode/g' HibaamApp/app/src/main/java/uz/hibaam/app/MainActivity.java
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
